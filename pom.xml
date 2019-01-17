@@ -76,6 +76,7 @@
             <version>1.2.3</version>
         </dependency>
 
+        <!--servlet  jsp  jstl-->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
@@ -94,6 +95,7 @@
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+<!--解析json对应的依赖-->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
@@ -109,7 +111,7 @@
         </dependency>
 
 
-        <!--joda-time时间格式化依赖-->
+        <!--joda-time时间格式化依赖  用来data格式和String格式的时间互转-->
         <dependency>
             <groupId>joda-time</groupId>
             <artifactId>joda-time</artifactId>
@@ -210,7 +212,13 @@
             <optional>true</optional>
         </dependency>
 
-        <!--青牛云-->
+        <!--thymeleaf的依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
+        <!--七牛云-->
         <dependency>
             <groupId>com.qiniu</groupId>
             <artifactId>qiniu-java-sdk</artifactId>

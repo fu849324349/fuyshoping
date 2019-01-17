@@ -1,0 +1,45 @@
+package com.neuedu.service;
+
+import com.neuedu.common.ServerResponse;
+
+public interface IOrderService {
+
+    /**
+     * 创建订单
+     * @param userId
+     * @param shippingId
+     * @return
+     */
+    ServerResponse creatOrder(Integer userId,Integer shippingId);
+
+    /**
+     * 取消订单
+     * @param userId
+     * @param orderNo
+     * @return
+     */
+    ServerResponse cancel(Integer userId,Long orderNo);
+
+    /**
+     * 获取购物车的订单明细
+     * @param userId
+     * @return
+     */
+    ServerResponse get_order_cart_product(Integer userId);
+
+    /**
+     * 订单list
+     * @param userId
+     * @return
+     */
+    ServerResponse list(Integer userId,Integer pageNum,Integer pageSize);
+
+    /**
+     * 订单详情
+     * @param orderNo
+     * @return
+     */
+    ServerResponse detail(Long orderNo);
+
+
+}

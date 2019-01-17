@@ -1,7 +1,10 @@
 package com.neuedu.dao;
 
+import com.neuedu.common.ServerResponse;
 import com.neuedu.pojo.UserInfo;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+
 
 import java.util.List;
 
@@ -46,4 +49,48 @@ public interface UserInfoMapper {
      * @mbggenerated
      */
     int updateByPrimaryKey(UserInfo record);
+
+    /**
+     * 校验用户名是否存在
+     */
+    int checkUsername(String username);
+
+    /**
+     * 校验邮箱是否存在
+     */
+    int checkEmail(String email);
+
+    /**
+     * 根据用户名和密码查询用户信息
+     * 查询用户信息所以返回UserInfo（一个用户）
+     * dao接口中若有多个参数不能直接写，每个参数前边都要加@Param注解
+     */
+    UserInfo selectUserInfoByUsernameAndPassword(@Param("username") String username,
+                                                 @Param("password") String password);
+
+    /**
+     * 根据用户名查询密保问题
+     */
+    String selectQuestionUsername(String username);
+
+    /**
+     * 根据用户名、密保问题、密保答案查询
+     */
+    int selectByUsernameAndQuestionAndAnswer(@Param("username") String username,
+                                                 @Param("question") String question,
+                                                    @Param("answer")String answer);
+
+    /**
+     * 修改用户密码接口
+     */
+    int updateUserPassword(@Param("username") String username,
+                           @Param("password") String password);
+
+    /**
+     * 更新用户信息
+     */
+    int updateUserBySelectActive(UserInfo userInfo);
+
+
+
 }

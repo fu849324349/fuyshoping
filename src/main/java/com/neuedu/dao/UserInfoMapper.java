@@ -91,6 +91,9 @@ public interface UserInfoMapper {
      */
     int updateUserBySelectActive(UserInfo userInfo);
 
-
+    /**
+     * 根据token查询用户信息
+     */
+    UserInfo getUserInfoByToken(String token);
 
 }

@@ -8,7 +8,7 @@ import java.util.Date;
 
 public class DateUtils {
 
-    private static final String STANARD_FORMAT="yyy-mm-dd:HH:mm:ss";
+    public  static final String STANARD_FORMAT="yyyy-MM-dd HH:mm:ss";
 
     /**
      * date格式的时间转成String格式的时间
@@ -18,7 +18,7 @@ public class DateUtils {
         DateTime dateTime = new DateTime(date);
         return dateTime.toString(formate);
     }
-    //对于上个方法D的重载
+    //对于上个方法的重载
     public static String dateToStr(Date date){
 
         DateTime dateTime = new DateTime(date);

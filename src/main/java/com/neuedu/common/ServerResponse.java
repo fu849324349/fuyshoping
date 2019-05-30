@@ -142,3 +142,4 @@ public class ServerResponse<T>{
         this.msg = msg;
     }
 }
+/*E:\idea\fuyshoping\src\main\java\com\neuedu\common\ServerResponse.java*/

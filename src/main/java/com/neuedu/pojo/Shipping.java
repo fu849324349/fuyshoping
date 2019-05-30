@@ -387,3 +387,4 @@ public class Shipping {
         this.updateTime = updateTime;
     }
 }
+/*E:\idea\fuyshoping\src\main\java\com\neuedu\pojo\Shipping.java*/

@@ -2,6 +2,7 @@ package com.neuedu.dao;
 
 import com.neuedu.pojo.OrderItem;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 

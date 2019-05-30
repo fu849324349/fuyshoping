@@ -116,7 +116,7 @@ public class UserServiceImpl implements IUserService {
     }
 
     /**
-     * 提交问题答案
+     * 根据用户名查询到密保问题之后，提交问题答案
      *
      * @param username
      * @param question
@@ -291,6 +291,19 @@ public class UserServiceImpl implements IUserService {
 
         return userInfoMapper.selectByPrimaryKey(userId);
 
+    }
+
+    /**
+     * 根据token查询用户信息
+     * @param token
+     */
+    @Override
+    public UserInfo getUserInfoByToken(String token) {
+//直接在程序中添加出模块功能之外的程序，违反了java中单一执行原则，一个类只能有一种职责，只负责跟该模块相关的业务逻辑的处理
+//        System.out.println("====开始执行====");
+
+
+        return userInfoMapper.getUserInfoByToken(token);
     }
 
 

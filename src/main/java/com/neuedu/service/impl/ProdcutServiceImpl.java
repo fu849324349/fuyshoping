@@ -62,7 +62,7 @@ public class ProdcutServiceImpl implements IProductService {
                 product.setMainImage(subImageArr[0]);
             }
         }
-        //step3：商品的save  or  update
+        //step3：商品的save  or  update    并返回结果
         if (product.getId()==null){
             //添加
             int insert = productMapper.insert(product);

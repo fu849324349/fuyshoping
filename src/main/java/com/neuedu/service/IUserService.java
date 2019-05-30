@@ -48,5 +48,9 @@ public interface IUserService {
      */
     UserInfo findUserinfoByUserId(Integer userId);
 
+    /**
+     *根据token查询用户信息
+     */
+    UserInfo getUserInfoByToken(String token);
 
 }

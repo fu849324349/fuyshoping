@@ -8,7 +8,7 @@ import org.springframework.web.multipart.MultipartFile;
 public interface IProductService {
 
     /**
-     * 添加或更新商品
+     * 后台-添加OR更新商品
      * @param product
      * @return
      */

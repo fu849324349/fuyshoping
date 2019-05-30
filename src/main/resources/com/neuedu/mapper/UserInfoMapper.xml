@@ -132,4 +132,11 @@
     where username=#{username} and question=#{question} and answer=#{answer}
   </select>
 
+  <select id="getUserInfoByToken" parameterType="string" resultType="string">
+      select id, username, password, email, phone, question, answer, role, create_time,
+    update_time, ip
+    from neuedu_user
+    where token = #{token}
+  </select>
+
 </mapper>

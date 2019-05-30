@@ -79,7 +79,7 @@ public class AddressServiceImpl implements IAddressService {
         int result = shippingMapper.updateBySelectiveKey(shipping);
         //3：返回结果
         if (result>0){
-            return ServerResponse.creatServerResponseBySuccess();
+            return ServerResponse.creatServerResponseBySuccess("更新地址成功");
         }
         return ServerResponse.creatServerResponseByError("更新失败");
     }

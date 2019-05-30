@@ -6,6 +6,7 @@ import com.neuedu.pojo.Product;
 import com.neuedu.pojo.UserInfo;
 import com.neuedu.service.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -75,10 +76,10 @@ public class ProductManageController {
     /**
      *查看商品列表
      */
-    @RequestMapping(value = "/list.do")
+    @RequestMapping(value = "/list.do/id")
     public ServerResponse list(HttpSession session,
                                @RequestParam(value = "pageNum",required = false,defaultValue = "1")Integer pageNum,
-                               @RequestParam(value = "pageSize",required = false,defaultValue = "10")Integer pageSize){
+                               @RequestParam(value = "pageSize",required = false,defaultValue = "10")Integer pageSize, @PathVariable Integer id){
 
         UserInfo userInfo = (UserInfo)session.getAttribute(Const.CURRENTUSER);
         //判断用户是否登录

@@ -156,8 +156,7 @@ public class UserController {
     public ServerResponse logout(HttpSession session){
 
         //更新session中用户信息
-       // UserInfo userInfo1= iUserService.
-        //session.removeAttribute(Const.CURRENTUSER);
+        session.removeAttribute(Const.CURRENTUSER);
         return ServerResponse.creatServerResponseBySuccess();
     }
 
